@@ -1,0 +1,190 @@
+/* sprites style */
+
+.weather {
+    &__status {
+        margin-top: 8px;
+        text-align: center;
+        .weather__today & {
+            text-align: left;
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 0 16px 0;
+        }
+    }
+    &__info {}
+    &__temp {
+        font-family: $font-family-special, Helvetica, Arial, sans-serif;
+        text-align: center;
+        .weather__today & {
+            margin-top: 8px;
+            font-weight: bold;
+            font-size: 24px;
+            color: #111;
+            text-align: left;
+        }
+    }
+    &__date,
+    &__desc,
+    &__cond {
+        display: block;
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+        .weather__today & {
+            text-align: left;
+        }
+    }
+    &__desc,
+    &__cond {
+        margin-top: 8px;
+    }
+    &__listing {
+        @include clearfix;
+        margin-top: 8px;
+    }
+    &__today {
+        @include clearfix;
+        margin-top: 8px;
+    }
+    &__day {
+        font-size: 12px;
+        width: 33.33%;
+        float: left;
+        padding: 0px 8px;
+        &+.weather__day {
+            border-left: 1px solid #ddd;
+        }
+        .weather__date,
+        .weather__desc,
+        .weather__cond {
+            font-size: 12px;
+        }
+    }
+}
+
+// icon weather
+.ic-weather {
+    display: inline-block;
+    background: url(../img/sprites-weather.svg) no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+.clear,
+.sunny {
+    background-position: 0px -200px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: 0px 0px;
+    }
+}
+
+.nt_clear,
+.nt_sunny {
+    background-position: -100px -200px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -100px 0px;
+    }
+}
+
+.mostlycloudy,
+.mostlysunny,
+.partlycloudy,
+.partlysunny,
+.cloudy {
+    background-position: -200px -200px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -200px 0px;
+    }
+}
+
+.nt_mostlycloudy,
+.nt_mostlysunny,
+.nt_partlycloudy,
+.nt_partlysunny,
+.nt_cloudy {
+    background-position: -300px -200px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -300px 0px;
+    }
+}
+
+.chancesleet,
+.sleet,
+.nt_chancesleet,
+.nt_sleet,
+.snow,
+.nt_snow,
+.chancesnow,
+.nt_chancesnow {
+    background-position: -400px -200px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -400px 0px;
+    }
+}
+
+.rain {
+    background-position: -0px -300px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -0px -100px;
+    }
+}
+
+.nt_rain {
+    background-position: -100px -300px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -100px -100px;
+    }
+}
+
+.fog,
+.hazy,
+.nt_fog,
+.nt_hazy {
+    background-position: -200px -300px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -200px -100px;
+    }
+}
+
+.chanceflurries,
+.flurries,
+.nt_chanceflurries,
+.nt_flurries,
+.chancetstorms,
+.tstorms,
+.nt_chancetstorms,
+.nt_tstorms {
+    background-position: -300px -300px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -300px -100px;
+    }
+}
+
+.chancerain,
+.nt_chancerain {
+    background-position: -400px -300px;
+    .weather__today & {
+        width: 100px;
+        height: 100px;
+        background-position: -400px -100px;
+    }
+}

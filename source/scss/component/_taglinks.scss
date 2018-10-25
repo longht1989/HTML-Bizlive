@@ -1,0 +1,45 @@
+// style for tag links
+.tag {
+    &__item {
+        display: inline-block;
+        background: #DDDDDD;
+        font-size: 12px;
+        line-height: 24px;
+        transition: all 0.2s linear;
+        padding: 0 4px 0 14px;
+        position: relative;
+        margin: 0 16px 8px 0;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: white;
+            margin-top: -3px;
+            left: 4px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-left: 12px solid #ddd;
+            border-bottom: 12px solid transparent;
+            top: 0;
+            right: -12px;
+            transition: all 0.2s linear;
+        }
+        &:hover {
+            color: white;
+            background: $brand-primary;
+            &::after {
+                border-left-color: $brand-primary;
+            }
+        }
+    }
+}

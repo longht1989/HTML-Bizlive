@@ -1,0 +1,92 @@
+// Market style
+.color-red {
+    color: $brand-primary;
+}
+
+.color-green {
+    color: $brand-info;
+}
+
+.color-orange {
+    color: $brand-danger;
+}
+
+.market {}
+
+.market .title {
+    background: #ece8e8;
+    color: #b21623;
+}
+
+.market .title a {
+    color: #b21623;
+}
+
+.market .navi {
+    margin-bottom: 6px;
+}
+
+.market .navi a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    &+a {
+        margin-left: 10px;
+    }
+    &.is-active {
+        font-weight: bold;
+        color: $brand-primary;
+    }
+}
+
+.market .navi a.current {
+    color: #000000
+}
+
+.market .navi span {
+    margin: 0px 17px;
+    width: 1px;
+    height: 18px;
+    background: #dddddd;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.market .des {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.market .des span:last-child {
+    font-size: 14px;
+}
+
+.market .import img {
+    margin: auto;
+    display: block;
+}
+
+.market table {
+    font-size: 12px;
+}
+
+.market table tr {
+    cursor: pointer;
+}
+
+.market table tr:first-child td {
+    border-top: 1px dotted #bfc1be;
+}
+
+.market table td {
+    padding: 5px 5px 5px 0px;
+    border-bottom: 1px dotted #bfc1be;
+}
+
+.market table tr td:first-child {
+    padding-left: 5px;
+}
+
+.market table tr:hover td {
+    background: #eda225;
+}

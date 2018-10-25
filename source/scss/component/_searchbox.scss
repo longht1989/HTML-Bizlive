@@ -1,0 +1,23 @@
+/* Search & ulti box */
+
+.search {
+    &-wrap {
+        height: 28px;
+        padding: 2px;
+        border: 1px solid #ccc;
+        position: relative;
+        .form-control {
+            height: 24px;
+            font-size: 12px;
+            border: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        .sprite-search {
+            cursor: pointer;
+            position: absolute;
+            right: 1px;
+            top: 1px;
+        }
+    }
+}

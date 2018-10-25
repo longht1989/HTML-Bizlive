@@ -1,0 +1,93 @@
+// box top rich style
+.box-top-rich {
+    .box__title {
+        margin-bottom: 15px;
+        span {
+            padding: 2px 5px;
+            background: $brand-primary;
+            color: white;
+        }
+        &__sub {
+            font-size: 11px;
+            float: right;
+            color: $gray-light !important;
+            background: none !important;
+            font-weight: normal;
+        }
+    }
+    .box__content {
+        @extend .two-cols;
+    }
+}
+
+.box-top-rich li {
+    margin-bottom: 15px;
+}
+
+.box-top-rich .avatar {
+    float: left;
+    margin-right: 40px;
+}
+
+.box-top-rich .name {
+    font-size: 16px;
+    line-height: 1.4em;
+    font-weight: bold;
+    text-transform: none;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.box-top-rich .assets {
+    font-size: 0;
+    overflow: hidden;
+    font-weight: bold;
+    @extend .three-cols;
+    span {
+        font-size: 16px;
+        line-height: 1.4em;
+    }
+}
+
+.box-top-rich .assets-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.box-top-rich .assets-up .assets {
+    color: $brand-info;
+}
+
+.box-top-rich .assets-up .assets-percent {
+    &::before {
+        display: inline;
+        content: '▲';
+        margin-right: 5px;
+        font-size: 0.7em;
+        vertical-align: middle;
+    }
+}
+
+.box-top-rich .assets-up .assets-title {
+    color: $brand-info;
+}
+
+.box-top-rich .assets-down .assets {
+    color: $brand-primary;
+}
+
+.box-top-rich .assets-down .assets-percent {
+    &::before {
+        display: inline;
+        content: '▼';
+        margin-right: 5px;
+        font-size: 0.7em;
+        vertical-align: middle;
+    }
+}
+
+.box-top-rich .assets-down .assets-title {
+    color: $brand-primary;
+}

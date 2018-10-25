@@ -1,0 +1,246 @@
+/* ====================================   Header's style   ==================================== */
+
+#site-header {
+    @include clearfix();
+    margin-bottom: 20px;
+    z-index: 10;
+    position: relative;
+
+    @include breakpoint(768px, 1024px) {
+        width: 1080px;
+    }
+}
+
+.site-header {
+    &__topbar {
+        @include clearfix();
+        padding: 0 10px;
+        background-color: rgb(102, 102, 102);
+        font-size: 13px;
+        line-height: 30px;
+        color: #555;
+        z-index: 5;
+        color: #f4f4f4;
+
+        .btn-fb {
+            float: left;
+            margin-right: 5px;
+            margin-top: 5px;
+            height: 21px;
+            overflow: hidden;
+        }
+
+        .linked-site {
+            color: #f4f4f4;
+            float: left;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        time {
+            float: left;
+        }
+
+        .site-wrap {
+            @include breakpoint(768px, 1024px) {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+
+    &__tool {
+        float: right;
+
+        .search-wrap {
+            width: 300px;
+            margin-left: 16px;
+            float: right;
+
+            @include breakpoint(768px, 1024px) {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__links {
+        float: left;
+
+        a,
+        span {
+            margin-left: 16px;
+            color: #f4f4f4;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .sprites {
+            vertical-align: middle;
+            border-radius: 2px;
+
+            &+.sprites {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    &__content {
+        // text-align: center;
+        padding: 25px 0;
+        @include clearfix;
+
+        .logo {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .tool {
+            width: 140px;
+            float: right;
+            text-align: center;
+        }
+
+        .social-share {
+            float: left;
+            width: 200px;
+            margin-top: 40px;
+            @include clearfix;
+
+            li {
+                float: left;
+
+                &+li {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .search-wrap {
+            width: 200px;
+            float: right;
+            margin-top: 40px;
+        }
+    }
+
+    &__social {
+        >p {
+            font-size: 12px;
+        }
+    }
+
+    &__nav {
+        background: white;
+        border-top: 1px solid #666666;
+        border-bottom: 1px solid #666666;
+
+        &.affix {
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 100;
+        }
+    }
+}
+
+.navigator {
+    @include clearfix();
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+    margin-left: -8px;
+    margin-right: -8px;
+    text-align: center;
+
+    @include breakpoint(768px, 1024px) {
+        background: darken($brand-primary, 15%);
+    }
+
+    >li {
+        display: inline-block;
+        position: relative;
+
+        a {
+            display: block;
+            padding: 0 10px;
+            transition: background 0.2s linear, color 0.2s linear;
+            color: $gray-base;
+
+            &:hover {
+                color: $brand-primary;
+                background-color: #f7f7f7;
+            }
+        }
+
+        &:hover {
+            background-color: #f7f7f7;
+
+            .navigator__child {
+                left: auto;
+            }
+
+            .navigator__search {
+                right: 0;
+            }
+        }
+
+        &:first-child {
+            .sprite-home {
+                position: relative;
+                top: 2px;
+            }
+
+            &:hover,
+            &.is-active {
+                .sprite-home {
+                    // background-position-x: -23px;
+                }
+            }
+        }
+
+        &.is-active {
+            a {
+                color: $brand-primary;
+            }
+        }
+
+        &:last-child {
+            &:hover {
+                .navigator__child {
+                    left: initial;
+                    right: -100px;
+                }
+            }
+        }
+    }
+
+    &__child {
+        position: absolute;
+        top: 100%;
+        left: -999em;
+        width: 220px;
+        z-index: 2;
+        text-align: left;
+
+        >li {
+            a {
+                padding-left: 16px;
+                padding-right: 16px;
+                background-color: #f7f7f7;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+        }
+    }
+}
+
+// video page Header

@@ -1,0 +1,348 @@
+/* ====================================
+   All region in project
+   ==================================== */
+
+
+/* zone global style */
+
+.zone {
+    margin-bottom: 20px;
+
+    &__header {
+        @include clearfix;
+        margin-bottom: 10px;
+
+    }
+
+    &__title {
+        font-size: 12px;
+        line-height: 1.4;
+        position: relative;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $brand-success;
+
+            &::after {
+                background: $brand-success;
+            }
+        }
+
+        a {
+            background-color: $brand-primary;
+            color: white;
+            transition: all 0.2s linear;
+            padding: 2px 5px;
+
+            &:hover {
+                background-color: darken($brand-primary, 10%);
+            }
+
+            &+.sub-title {
+                padding-left: 10px;
+                border-left: 1px solid #ddd;
+                margin-left: 10px;
+            }
+        }
+
+        .sub-title {
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: none;
+            line-height: initial;
+
+            &+.sub-title {
+                margin-left: 8px;
+                padding-left: 8px;
+                border-left: 1px solid #eee;
+            }
+        }
+
+        .zone--featured & {
+            color: white;
+
+            &::after {
+                background: white;
+            }
+
+            &:hover {
+                color: $brand-primary;
+
+                &:after {
+                    background: $brand-primary;
+                }
+            }
+        }
+    }
+
+    &__control {
+        float: right;
+
+        .prev,
+        .next {
+            display: inline-block;
+            margin-left: 8px;
+            background: #f0f0f0;
+            font-size: 14px;
+            line-height: 24px;
+            width: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:hover {
+                color: black;
+                background: #ccc;
+            }
+        }
+    }
+
+    &__footer {
+        .view-more {
+            font-size: 12px;
+            text-align: right;
+
+            a {
+                color: $brand-primary;
+
+                &:hover {
+                    color: $brand-success;
+                }
+            }
+        }
+    }
+
+    &__content {
+        @include clearfix();
+    }
+
+    &--grey {
+        background: #F0F0F0;
+        padding: 10px;
+    }
+
+    &--featured {
+        background: #888;
+        padding: 8px;
+
+        .no-js & {
+            max-height: 250px;
+            overflow: hidden;
+        }
+
+        .zone__header {
+            margin-bottom: 8px;
+        }
+
+        .zone__title {
+            a {
+                color: white;
+
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+
+    .sidebar-col &,
+    &--aside {
+        .zone__title {
+            font-size: 16px;
+        }
+    }
+
+    &--media {
+        position: relative;
+
+        .bx-pager {
+            position: absolute;
+            top: 21px;
+            right: 8px;
+
+            &-item {
+                float: left;
+
+                &+.bx-pager-item {
+                    margin-left: 8px;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    text-indent: -999em;
+                    background: #444;
+
+                    &.active {
+                        background: white;
+                    }
+                }
+            }
+        }
+
+        .story {
+            &+.story {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &.suyngam {
+        border-radius: 10px;
+
+        .zone__header {
+            img {
+                max-height: 40px;
+                width: auto;
+            }
+        }
+    }
+
+    &.tieudiem {
+        border-radius: 10px;
+        background: url(../img/tieudiem__bg.png) left top no-repeat #F0F0F0;
+        background-size: 100%;
+
+        .zone__header {
+            img {
+                // max-height: 40px;
+                // width: auto;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .zone__title {
+            width: 40%;
+            height: auto;
+            float: left;
+        }
+
+        .zone__title--sub {
+            float: right;
+            width: 55%;
+            font-size: 12px;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+
+        .zone__content {
+            padding-left: 60px;
+            min-height: 60px;
+            background: url(../img/tieudiem__symbol.png) left 10px top no-repeat #F0F0F0;
+            background-size: 30px 60px;
+        }
+    }
+}
+
+// ads
+.qc {
+    @include clearfix();
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+// box style
+.box {
+    &__title {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: $brand-primary;
+        @include clearfix;
+    }
+
+    &--event {
+        .box__title {
+            float: left;
+            margin: 3px 10px 0 0;
+            font-weight: normal;
+
+            span {
+                color: white;
+                padding: 3px 5px;
+                background: $brand-primary;
+            }
+        }
+    }
+
+    &--mostview {
+        .box__title {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// breaking zone
+.breaking {
+    &-wrap {
+        @include clearfix;
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+
+    &__label {
+        padding: 4px 8px;
+        background: #F0F0F0;
+        margin-right: 12px;
+        float: left;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-left: 5px solid #f0f0f0;
+            border-bottom: 5px solid transparent;
+            position: absolute;
+            top: 7px;
+            right: -5px;
+        }
+    }
+
+    &__listing {
+        float: left;
+        line-height: 25px;
+        @include clearfix;
+        height: 25px;
+        overflow: hidden;
+        width: 1064px;
+    }
+
+    &__item {
+        float: left;
+
+        &+.breaking__item {
+            margin-left: 8px;
+
+            &::before {
+                display: inline;
+                content: '●';
+                margin-right: 8px;
+                color: #555;
+            }
+        }
+    }
+}
+
+.qc {
+    &--floating {
+        position: absolute;
+        top: 0;
+    }
+
+    &--left {
+        right: 100%;
+        margin-right: 10px;
+    }
+
+    &--right {
+        left: 100%;
+        margin-left: 10px;
+    }
+}
